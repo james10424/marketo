@@ -50,7 +50,7 @@ function submitAndChilipiper_413(values, followUpUrl, $form) {
 
 function submitAndChilipiper_316(values, followUpUrl, $form) {
   var successOrRouted = false;
-  window.metrics.trackEvent("Contact form submission");
+  window.metrics?.trackEvent("Contact form submission");
 
   ChiliPiper.submit("envoy", "inbound_contact_router", {
     title: "Thanks! What time works best for a quick call?",
@@ -95,7 +95,7 @@ function submitAndRedirectToDemo(values, followUpUrl, $form) {
   };
 
   const track_name = $form.data("track");
-  window.metrics.trackEvent(track_name);
+  window.metrics?.trackEvent(track_name);
   ChiliPiper.submit("envoy", "inbound-router", {
     onError: function () {
       redirectToDemo(values, followUpUrl, $form);
@@ -150,7 +150,7 @@ function redirectToSurvey(values, followUpUrl, $form) {
 }
 
 function submitAndChilipiper_255(values, followUpUrl, $form) {
-  window.metrics.trackEvent("Quote form submission");
+  window.metrics?.trackEvent("Quote form submission");
 
   ChiliPiper.submit("envoy", "inbound_quote_router", {
     title: "Thanks! What time works best for a quick call?",
