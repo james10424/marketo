@@ -107,7 +107,8 @@ function submitAndRedirectToDemo(values, followUpUrl, $form) {
       redirectToDemo(values, followUpUrl, $form);
     },
   });
-
+  localStorage.setItem("email", values["Email"]);
+  location.href = "/as/ds03/demo-videos/";
   return false;
 }
 
